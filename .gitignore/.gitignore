@@ -1,0 +1,95 @@
+#include <iostream>
+#include <stdio.h>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+long int xy;
+long int yx;
+int primedetermine;
+long int xd;
+long int x;
+x = 1;
+long int y;
+long int z;
+z = 1;
+cout <<"Welcome, if you want to find primes, type 1, if you want to know if a number is prime, press 2, if you want to see if one number is divisible by another, press 3" <<endl;
+cin >> y;
+
+if (y==1){///This is for finding prime numbers.
+cout <<"How many primes do you want to find? (remember 2 and 3 are always prime.)" <<endl;
+cin >> xd;
+while (z<=xd){
+	
+if (x%2 == 1){
+	cout <<x << " is prime." <<endl;
+	x++;
+	z++;
+}
+else if (x%2 == 0){
+	x++;
+	
+}
+else if (x%3 == 1){
+	cout <<x << " is prime." <<endl;
+	x++;
+	z++;
+}	
+else if (x%3 == 0){
+	x++;
+	
+}
+else if (z>xd){
+	cout << "Those are your primes!" <<endl;
+	return 16;
+}
+}
+}
+
+
+
+if (y==2){///this is for if you want to know if x is prime
+cout <<"Which number do you want to know is prime?" <<endl;
+cin >> primedetermine;
+
+if (primedetermine == 2 or 3){
+	cout <<"Your number is prime." <<endl;
+	return 16;
+}
+
+else if (primedetermine%2 == 1){
+		while (primedetermine%3 == 1){
+	cout <<"Your number is prime!" <<endl;
+	return 16;
+}
+}
+else if (primedetermine%2 == 0){
+	cout <<"Your number is not prime." <<endl;
+	return 16;
+	
+}
+else if (primedetermine%3 == 0){
+	cout <<"Your number is not prime." <<endl;
+	return 16;
+
+}
+
+
+if (y==3){
+cout <<"Which number do you want to be divided." <<endl;
+cin >> xy;
+cout <<"Which number do you want it to be divided by?" <<endl;
+cin >>yx;
+
+if (xy%yx == 0){
+	cout << "Your numbers are divisble by each other." <<endl;
+	return 16;
+}
+else if (xy%yx !=0){
+	cout <<"Your numbers are not divisible by each other." <<endl;
+	return 16;
+} 
+}
+}
+}
